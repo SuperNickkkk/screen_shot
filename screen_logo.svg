@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- 背景 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#007AFF;stop-opacity:0.2" />
+      <stop offset="50%" style="stop-color:#FF2D55;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#34C759;stop-opacity:0.2" />
+    </linearGradient>
+    <radialGradient id="iconGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#5AC8FA" />
+      <stop offset="100%" style="stop-color:#007AFF" />
+    </radialGradient>
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 圆角矩形背景 -->
+  <rect x="10" y="10" width="180" height="180" rx="40" ry="40" fill="url(#bgGradient)"/>
+  
+  <!-- 录屏图标 -->
+  <g fill="none" stroke="url(#iconGradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#neonGlow)">
+    <!-- 外部圆形 -->
+    <circle cx="100" cy="100" r="70">
+      <animate attributeName="stroke-dasharray" values="0 440;440 440" dur="2s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- 内部录制按钮 -->
+    <circle cx="100" cy="100" r="30" fill="#FF3B30" stroke="none">
+      <animate attributeName="r" values="30;32;30" dur="1s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- 动画效果 -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="#34C759" stroke-width="4" stroke-dasharray="534" stroke-dashoffset="534" opacity="0.7">
+    <animate attributeName="stroke-dashoffset" from="534" to="0" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="stroke" values="#34C759;#5AC8FA;#FF2D55;#34C759" dur="4s" repeatCount="indefinite" />
+  </circle>
+</svg>

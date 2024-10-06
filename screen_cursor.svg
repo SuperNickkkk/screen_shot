@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- 定义滤镜 -->
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feComposite in="SourceGraphic" in2="coloredBlur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- 闪动的红点 -->
+  <circle cx="100" cy="100" r="10" fill="#FF3B30" filter="url(#glow)">
+    <animate attributeName="opacity"
+             values="1;0.5;1"
+             dur="1.5s"
+             repeatCount="indefinite"
+             calcMode="spline"
+             keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
+    <animate attributeName="r"
+             values="10;12;10"
+             dur="1.5s"
+             repeatCount="indefinite"
+             calcMode="spline"
+             keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
+  </circle>
+</svg>

@@ -1,0 +1,19 @@
+﻿# Python bytecode
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Temporary files
+temp_*
+
+# IDE settings
+.vscode/
+
+# Environment variables
+.env
+
+# 其他特定于项目的忽略项
+V1_SAVED/
+*.srt
