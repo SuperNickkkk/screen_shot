@@ -10,7 +10,7 @@ import platform
 
 class OpenAITranscriptionService:
     def __init__(self):
-        self.api_key = "sk-ppYyUS107XQotTDHFZo4NN2UsYnFjbB9KWHMjp0vZs52jY8K"
+        self.api_key = ""
         self.transcription_url = "https://api.chatanywhere.tech/v1/audio/transcriptions"
 
     def transcribe_audio(self, audio_file_path):
